@@ -1,9 +1,12 @@
 
+import 'package:client/home_widget/home_widget.dart';
 import 'package:client/values/values.dart';
 import 'package:flutter/material.dart';
 
 
 class WorkingWidget extends StatelessWidget {
+  
+  void onTogglePressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
   
   @override
   Widget build(BuildContext context) {
@@ -37,24 +40,23 @@ class WorkingWidget extends StatelessWidget {
                 width: 250,
                 height: 41,
                 margin: EdgeInsets.only(bottom: 65),
-                decoration: BoxDecoration(
+                child: FlatButton(
+                  onPressed: () => this.onTogglePressed(context),
                   color: Color.fromARGB(255, 83, 83, 83),
-                  borderRadius: BorderRadius.all(Radius.circular(16)),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Let’s chill!",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 236, 240, 241),
-                        fontWeight: FontWeight.w400,
-                        fontSize: 18,
-                        letterSpacing: 0.9,
-                      ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                  ),
+                  textColor: Color.fromARGB(255, 236, 240, 241),
+                  padding: EdgeInsets.all(0),
+                  child: Text(
+                    "Let’s chill!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 236, 240, 241),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 18,
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),

@@ -35,23 +35,27 @@ class TogglesWidget extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: Container(
-                width: 225,
+                width: 305,
                 height: 119,
                 margin: EdgeInsets.only(top: 56),
-                child: Column(
+                child: Stack(
+                  alignment: Alignment.topCenter,
                   children: [
-                    Text(
-                      "Simulate",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.w400,
-                        fontSize: 55,
-                        letterSpacing: 2.75,
+                    Positioned(
+                      top: 0,
+                      child: Text(
+                        "Simulate",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 55,
+                          letterSpacing: 2.75,
+                        ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 2),
+                    Positioned(
+                      top: 67,
                       child: Text(
                         "Trigger events\nmanually",
                         textAlign: TextAlign.center,
