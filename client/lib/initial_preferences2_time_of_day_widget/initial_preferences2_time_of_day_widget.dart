@@ -29,31 +29,34 @@ class InitialPreferences2TimeOfDayWidget extends StatelessWidget {
             ),
             Positioned(
               left: 11,
-              top: 51,
+              top: 42,
               right: 15,
-              bottom: 54,
+              bottom: 42,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    width: 263,
-                    height: 143,
+                    width: 328,
+                    height: 136,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "What time do you\nusually wake up?",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: AppColors.secondaryText,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 35,
+                        Container(
+                          width: 352,
+                          height: 85,
+                          child: Text(
+                            "What time do you\nusually wake up?",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: AppColors.secondaryText,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 35,
+                            ),
                           ),
                         ),
-                        Spacer(),
                         Container(
+                          width: 250,
                           height: 41,
-                          margin: EdgeInsets.only(left: 6, right: 7),
                           decoration: BoxDecoration(
                             color: AppColors.secondaryElement,
                             border: Border.fromBorderSide(Borders.primaryBorder),
@@ -78,24 +81,28 @@ class InitialPreferences2TimeOfDayWidget extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 271,
-                    height: 143,
+                    width: 334,
+                    height: 146,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "What time do you \nusually go to bed?",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: AppColors.secondaryText,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 35,
+                        Container(
+                          width: 409,
+                          height: 84,
+                          child: Text(
+                            "What time do you \nusually go to bed?",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: AppColors.secondaryText,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 35,
+                            ),
                           ),
                         ),
-                        Spacer(),
                         Container(
+                          width: 250,
                           height: 41,
-                          margin: EdgeInsets.only(left: 10, right: 11),
+                          margin: EdgeInsets.only(top: 20),
                           decoration: BoxDecoration(
                             color: AppColors.secondaryElement,
                             border: Border.fromBorderSide(Borders.primaryBorder),
@@ -120,45 +127,46 @@ class InitialPreferences2TimeOfDayWidget extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 305,
-                    height: 130,
+                    width: 339,
+                    height: 140,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "How many hours do you\nwork every day?",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: AppColors.secondaryText,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 30,
+                        Container(
+                          width: 380,
+                          height: 77,
+                          child: Text(
+                            "How many hours do you\nwork every day?",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: AppColors.secondaryText,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 30,
+                            ),
                           ),
                         ),
-                        Spacer(),
-                        Align(
-                          alignment: Alignment.topCenter,
-                          child: Container(
-                            width: 250,
-                            height: 41,
-                            decoration: BoxDecoration(
-                              color: AppColors.secondaryElement,
-                              border: Border.fromBorderSide(Borders.primaryBorder),
-                              borderRadius: Radii.k16pxRadius,
+                        Container(
+                          width: 250,
+                          height: 41,
+                          margin: EdgeInsets.only(top: 19),
+                          decoration: BoxDecoration(
+                            color: AppColors.secondaryElement,
+                            border: Border.fromBorderSide(Borders.primaryBorder),
+                            borderRadius: Radii.k16pxRadius,
+                          ),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: "time",
+                              contentPadding: EdgeInsets.only(top: 10),
+                              border: InputBorder.none,
                             ),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                hintText: "time",
-                                contentPadding: EdgeInsets.only(top: 10),
-                                border: InputBorder.none,
-                              ),
-                              style: TextStyle(
-                                color: AppColors.secondaryText,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 18,
-                              ),
-                              maxLines: 1,
-                              autocorrect: false,
+                            style: TextStyle(
+                              color: AppColors.secondaryText,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 18,
                             ),
+                            maxLines: 1,
+                            autocorrect: false,
                           ),
                         ),
                       ],

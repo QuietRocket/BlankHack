@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 
 
 class InitialPreferences1SpotifyWidget extends StatelessWidget {
+  final String name;
+
+  InitialPreferences1SpotifyWidget({ Key key, this.name });
   
   void onLoginSpotifyButtPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => EnterSpotifyInfoWidget()));
   
@@ -31,11 +34,11 @@ class InitialPreferences1SpotifyWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      flex: 6.82927,
+                      flex: 7,
                       child: Container(
                         width: 286,
                         child: Text(
-                          "{name}, we believe alarms are annoying.\n\nInstead of an annoying alarm, why not listen to your favorite music to start the day?",
+                          "${this.name == null ? 'Hello' : this.name}, we believe alarms are annoying.\n\nInstead of an annoying alarm, why not listen to your favorite music to start the day?",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: AppColors.secondaryText,
@@ -71,7 +74,7 @@ class InitialPreferences1SpotifyWidget extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      flex: 1.53659,
+                      flex: 1,
                       child: Container(
                         width: 250,
                         margin: EdgeInsets.only(top: 10),

@@ -3,10 +3,15 @@ import 'package:client/initial_preferences1_spotify_widget/initial_preferences1_
 import 'package:client/values/values.dart';
 import 'package:flutter/material.dart';
 
+class InitializationScreenWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _InitializationScreenState();
+}
 
-class InitializationScreenWidget extends StatelessWidget {
+class _InitializationScreenState extends State<InitializationScreenWidget> {
+  String name;
   
-  void onButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => InitialPreferences1SpotifyWidget()));
+  void onButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => InitialPreferences1SpotifyWidget(name: this.name,)));
   
   @override
   Widget build(BuildContext context) {
@@ -29,7 +34,7 @@ class InitializationScreenWidget extends StatelessWidget {
                   children: [
                     Container(
                       width: 396,
-                      height: 50,
+                      height: 117,
                       child: Text(
                         "Welcome to BetterLife",
                         textAlign: TextAlign.center,
@@ -71,14 +76,19 @@ class InitializationScreenWidget extends StatelessWidget {
                       width: 250,
                       height: 37,
                       decoration: BoxDecoration(
-                        color: AppColors.secondaryElement,
+                        color: Color.fromARGB(255, 255, 255, 255),
                         border: Border.fromBorderSide(Borders.primaryBorder),
                         borderRadius: Radii.k16pxRadius,
                       ),
                       child: TextField(
+                        onChanged: (String value) {
+                          setState(() {
+                            name = value;
+                          });
+                        },
                         decoration: InputDecoration(
                           hintText: "Name",
-                          contentPadding: EdgeInsets.only(top: 8),
+                          contentPadding: EdgeInsets.all(0),
                           border: InputBorder.none,
                         ),
                         style: TextStyle(

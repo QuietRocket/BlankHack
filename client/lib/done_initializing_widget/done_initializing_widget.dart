@@ -1,13 +1,12 @@
 
+import 'package:client/home_widget/home_widget.dart';
 import 'package:client/values/values.dart';
 import 'package:flutter/material.dart';
 
 
 class DoneInitializingWidget extends StatelessWidget {
   
-  void onButtonPressed(BuildContext context) {
-  
-  }
+  void onButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
   
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class DoneInitializingWidget extends StatelessWidget {
                   children: [
                     Container(
                       width: 325,
-                      height: 193,
+                      height: 222,
                       child: Text(
                         "Thanks!\nEverything is set up.\n\nLet’s get started.",
                         textAlign: TextAlign.center,
