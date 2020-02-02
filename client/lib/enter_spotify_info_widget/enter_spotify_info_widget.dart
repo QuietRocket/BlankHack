@@ -41,7 +41,7 @@ class EnterSpotifyInfoWidget extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 317,
+                    width: 250,
                     height: 41,
                     decoration: BoxDecoration(
                       color: AppColors.secondaryElement,
