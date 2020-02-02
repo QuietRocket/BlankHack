@@ -31,7 +31,7 @@ class InitialPreferences1SpotifyWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      flex: 6.82927,
+                      flex: 7,
                       child: Container(
                         width: 286,
                         child: Text(
@@ -71,7 +71,7 @@ class InitialPreferences1SpotifyWidget extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      flex: 1.53659,
+                      flex: 1,
                       child: Container(
                         width: 250,
                         margin: EdgeInsets.only(top: 10),

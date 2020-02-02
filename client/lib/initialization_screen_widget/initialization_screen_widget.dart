@@ -29,7 +29,7 @@ class InitializationScreenWidget extends StatelessWidget {
                   children: [
                     Container(
                       width: 396,
-                      height: 50,
+                      height: 117,
                       child: Text(
                         "Welcome to BetterLife",
                         textAlign: TextAlign.center,
@@ -71,14 +71,14 @@ class InitializationScreenWidget extends StatelessWidget {
                       width: 250,
                       height: 37,
                       decoration: BoxDecoration(
-                        color: AppColors.secondaryElement,
+                        color: Color.fromARGB(255, 255, 255, 255),
                         border: Border.fromBorderSide(Borders.primaryBorder),
                         borderRadius: Radii.k16pxRadius,
                       ),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: "Name",
-                          contentPadding: EdgeInsets.only(top: 8),
+                          contentPadding: EdgeInsets.all(0),
                           border: InputBorder.none,
                         ),
                         style: TextStyle(

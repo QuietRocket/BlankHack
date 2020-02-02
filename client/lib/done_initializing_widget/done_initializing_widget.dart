@@ -42,7 +42,7 @@ class DoneInitializingWidget extends StatelessWidget {
                   children: [
                     Container(
                       width: 325,
-                      height: 193,
+                      height: 222,
                       child: Text(
                         "Thanks!\nEverything is set up.\n\nLet’s get started.",
                         textAlign: TextAlign.center,
