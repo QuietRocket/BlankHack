@@ -3,10 +3,15 @@ import 'package:client/initial_preferences1_spotify_widget/initial_preferences1_
 import 'package:client/values/values.dart';
 import 'package:flutter/material.dart';
 
+class InitializationScreenWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _InitializationScreenState();
+}
 
-class InitializationScreenWidget extends StatelessWidget {
+class _InitializationScreenState extends State<InitializationScreenWidget> {
+  String name;
   
-  void onButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => InitialPreferences1SpotifyWidget()));
+  void onButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => InitialPreferences1SpotifyWidget(name: this.name,)));
   
   @override
   Widget build(BuildContext context) {
@@ -76,6 +81,11 @@ class InitializationScreenWidget extends StatelessWidget {
                         borderRadius: Radii.k16pxRadius,
                       ),
                       child: TextField(
+                        onChanged: (String value) {
+                          setState(() {
+                            name = value;
+                          });
+                        },
                         decoration: InputDecoration(
                           hintText: "Name",
                           contentPadding: EdgeInsets.all(0),

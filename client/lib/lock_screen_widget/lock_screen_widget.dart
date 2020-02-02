@@ -74,8 +74,8 @@ class LockScreenWidget extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.only(left: 13, top: 96, right: 11, bottom: 32),
                 child: ListView.builder(
-                  itemCount: 15,
-                  itemBuilder: (context, index) => NotificationItemWidget(),
+                  itemCount: 5,
+                  itemBuilder: (context, index) => NotificationItemWidget(index: index,),
                 ),
               ),
             ),

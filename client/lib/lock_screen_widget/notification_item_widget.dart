@@ -2,8 +2,18 @@
 import 'package:client/values/values.dart';
 import 'package:flutter/material.dart';
 
-
 class NotificationItemWidget extends StatelessWidget {
+  final int index;
+
+  final List<String> stuff = [
+    "Instagram: Check out Oliver's latest post",
+    "Twitter: Trump legalizes marriage with extraterrestrials",
+    "YouTube: h3h3productions uploaded a new video",
+    "Instagram: josie223 liked your photo",
+    "Spotify: Hear this week's newest hits"
+  ];
+
+  NotificationItemWidget({ Key key, this.index });
   
   @override
   Widget build(BuildContext context) {
@@ -51,7 +61,7 @@ class NotificationItemWidget extends StatelessWidget {
             height: 63,
             margin: EdgeInsets.only(left: 15, right: 14, bottom: 9),
             child: Text(
-              "Insta: Check out Oliver’s latest accomplishment",
+              stuff[this.index],
               textAlign: TextAlign.left,
               style: TextStyle(
                 color: Color.fromARGB(255, 236, 240, 241),

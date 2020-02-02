@@ -46,8 +46,8 @@ class InitialPreferences3ActivitiesWidget extends StatelessWidget {
                       height: 319,
                       margin: EdgeInsets.only(top: 5),
                       child: ListView.builder(
-                        itemCount: 15,
-                        itemBuilder: (context, index) => ViewItemWidget(),
+                        itemCount: 7,
+                        itemBuilder: (context, index) => ViewItemWidget(index: index,),
                       ),
                     ),
                     Container(
